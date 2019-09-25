@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Stock Checker</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div id="login">
+	    <p>Please Login to track your stocks</p>
+            <label for="username">USERNAME:</label>
+            <input type="text" name="username" id="username" required>
+            
+            <label for="password">PASSWORD:</label>
+            <input type="password" name="password" id="password" required>
+            
+            <button type="button" onclick="checkLogin()">LOGIN</button>
+            
+            <p id="loginFeedback"></p>
+        </div>
+    
+    <main id="stockInfo">
+        <h1>MY STOCKS</h1>
+        <h2 id="name"></h2>
+        <button type="button" onclick="logout()" id="logout">LOGOUT</button>
+        
+        <table id="stockList">
+            <tr>
+                <th>Company</th>
+                <th>Recent Movement</th>
+            </tr>
+        </table>
+        <div id="moreInfo">
+            <table id="infoTable"></table>
+        </div>
+        <button id="addStock" onclick="showModal()">ADD STOCKS</button>
+    </main>
+    <div id="modal">
+        <div id="mContent">
+            <h3>Please select the stocks you would like to track</h3>
+            <div id="addList"></div>
+            <button onclick="cancel()">CANCEL</button>
+            <button onclick="addStocks()">ADD</button>
+        </div>
+    </div>
+    <script src="stocks.js"></script>
+</body>
+</html>
